@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<robot name="sam_auv" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- Meshes. -->
+  <xacro:property name="visual_mesh_file" value="file://$(find sam_description)/mesh/docking_station.dae"/>
+
+  <!-- Links. -->
+  <link name="docking_station_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="${visual_mesh_file}" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+
+</robot>
